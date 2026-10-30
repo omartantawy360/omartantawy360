@@ -2,7 +2,7 @@
 
 <!-- Minimalist Linear-Style Header -->
 <a href="https://github.com/omartantawy360">
-  <img src="https://raw.githubusercontent.com/omartantawy360/omartantawy360/main/assets/header.svg" width="100%" alt="Omar Tantawy" />
+  <img src="./assets/header.svg" width="100%" alt="Omar Tantawy" />
 </a>
 
 <p align="center">
