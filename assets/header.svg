@@ -1,314 +1,111 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="1000" height="340" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 180" width="1000" height="180" fill="none">
   <defs>
-    <!-- Background Gradients -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080c14"/>
-      <stop offset="45%" stop-color="#0d1424"/>
-      <stop offset="100%" stop-color="#070a10"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17"/>
+      <stop offset="100%" stop-color="#05070c"/>
     </linearGradient>
 
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
-      <stop offset="35%" stop-color="#818cf8" stop-opacity="0.4"/>
-      <stop offset="70%" stop-color="#c084fc" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.8"/>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.2"/>
     </linearGradient>
 
-    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="40%" stop-color="#e0f2fe"/>
-      <stop offset="75%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#818cf8"/>
-    </linearGradient>
-
-    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.2"/>
-    </linearGradient>
-
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85"/>
-    </linearGradient>
-
-    <!-- Glow Filters -->
-    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="25" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-
-    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="30" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-
-    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
-    </filter>
-
-    <!-- Pattern Grid -->
-    <pattern id="cyberGrid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.08"/>
-      <circle cx="30" cy="0" r="1" fill="#38bdf8" fill-opacity="0.2"/>
-    </pattern>
+    <radialGradient id="softGlow" cx="0%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
   <style>
-    .title-text {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Inter', sans-serif;
-      font-weight: 800;
-      font-size: 46px;
-      letter-spacing: -0.5px;
-    }
-    .role-badge {
-      font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
-      font-weight: 600;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .sub-text {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      fill: #94a3b8;
-    }
-    .code-text {
-      font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
-      font-size: 12px;
-      line-height: 1.6;
-    }
-    .tech-pill-text {
-      font-family: 'Fira Code', 'JetBrains Mono', monospace;
+    .kicker {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Fira Code', monospace;
       font-size: 11px;
       font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      fill: #38bdf8;
     }
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.8; }
-      50% { opacity: 0.3; }
+    .name {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      fill: #ffffff;
     }
-    @keyframes floatOrb {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-6px); }
+    .tagline {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      fill: #94a3b8;
     }
-    .pulsing {
-      animation: pulseGlow 3s ease-in-out infinite;
+    .status-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      fill: #a7f3d0;
+    }
+    .stack-tag {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+      font-size: 11px;
+      font-weight: 500;
+      fill: #cbd5e1;
     }
   </style>
 
-  <!-- Base Card Background -->
-  <rect x="2" y="2" width="996" height="336" rx="20" fill="url(#bgGrad)"/>
-  
-  <!-- Cyber Ambient Glow Orbs -->
-  <circle cx="150" cy="60" r="100" fill="#0284c7" fill-opacity="0.18" filter="url(#glowCyan)"/>
-  <circle cx="850" cy="240" r="120" fill="#8b5cf6" fill-opacity="0.16" filter="url(#glowPurple)"/>
-  <circle cx="500" cy="170" r="140" fill="#06b6d4" fill-opacity="0.08" filter="url(#glowCyan)"/>
+  <!-- Card Canvas -->
+  <rect x="1" y="1" width="998" height="178" rx="12" fill="url(#bg)"/>
+  <rect x="1" y="1" width="998" height="178" rx="12" fill="url(#softGlow)"/>
+  <rect x="1" y="1" width="998" height="178" rx="12" fill="none" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- Cyber Grid Pattern Overlay -->
-  <rect x="2" y="2" width="996" height="336" rx="20" fill="url(#cyberGrid)"/>
+  <!-- Top Accent Gradient Line -->
+  <path d="M 12 1 L 988 1" stroke="url(#accentLine)" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- Card Outer Glowing Border -->
-  <rect x="2" y="2" width="996" height="336" rx="20" fill="none" stroke="url(#borderGrad)" stroke-width="1.5"/>
+  <!-- Content Block -->
+  <g transform="translate(48, 42)">
+    <!-- Role Kicker -->
+    <text x="0" y="0" class="kicker">Full-Stack Developer &amp; Front-End Specialist</text>
 
-  <!-- Top Glassmorphic Navigation Bar -->
-  <rect x="2" y="2" width="996" height="42" rx="20" fill="#0f172a" fill-opacity="0.6"/>
-  <line x1="2" y1="44" x2="998" y2="44" stroke="#334155" stroke-opacity="0.6" stroke-width="1"/>
+    <!-- Name -->
+    <text x="0" y="44" class="name">Omar Tantawy</text>
 
-  <!-- Window Dots -->
-  <circle cx="32" cy="23" r="6" fill="#ef4444"/>
-  <circle cx="52" cy="23" r="6" fill="#f59e0b"/>
-  <circle cx="72" cy="23" r="6" fill="#10b981"/>
+    <!-- Tagline -->
+    <text x="0" y="74" class="tagline">Crafting modern, type-safe web applications with React 19, Next.js (App Router) &amp; Node.js</text>
 
-  <!-- Center Tab Breadcrumb -->
-  <g transform="translate(400, 27)">
-    <rect x="-80" y="-14" width="220" height="22" rx="6" fill="#1e293b" fill-opacity="0.7" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="0.8"/>
-    <text x="30" y="2" text-anchor="middle" fill="#94a3b8" class="code-text" font-size="11">~/omartantawy (main)*</text>
-  </g>
-
-  <!-- Status Indicator (Top Right) -->
-  <g transform="translate(820, 23)">
-    <rect x="-10" y="-11" width="165" height="22" rx="11" fill="#064e3b" fill-opacity="0.6" stroke="#10b981" stroke-opacity="0.5" stroke-width="1"/>
-    <circle cx="3" cy="0" r="4" fill="#34d399" class="pulsing"/>
-    <text x="16" y="4" fill="#a7f3d0" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="0.5">OPEN FOR PROJECTS</text>
-  </g>
-
-  <!-- Left Content Column -->
-  <g transform="translate(48, 70)">
-    
-    <!-- Top Pill Tag -->
-    <g transform="translate(0, 16)">
-      <rect x="0" y="0" width="265" height="26" rx="6" fill="url(#badgeGrad)" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
-      <circle cx="14" cy="13" r="3.5" fill="#38bdf8"/>
-      <text x="26" y="17" fill="#38bdf8" class="role-badge">FULL STACK SPECIALIST</text>
-    </g>
-
-    <!-- Main Hero Name -->
-    <text x="0" y="85" class="title-text" fill="url(#nameGrad)">Omar Tantawy</text>
-
-    <!-- Punchy Subtitle with Highlight Accents -->
-    <text x="0" y="118" class="sub-text">
-      Architecting <tspan fill="#38bdf8" font-weight="700">Reactive Interfaces</tspan> &amp; <tspan fill="#a855f7" font-weight="700">Scalable Backends</tspan>
-    </text>
-
-    <!-- Core Stack Badges Grid inside SVG -->
-    <g transform="translate(0, 146)">
-      
-      <!-- React 19 Pill -->
+    <!-- Tech Pills -->
+    <g transform="translate(0, 96)">
       <g transform="translate(0, 0)">
-        <rect width="90" height="28" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="1"/>
-        <circle cx="15" cy="14" r="5" fill="#61dafb" fill-opacity="0.2"/>
-        <circle cx="15" cy="14" r="2.5" fill="#61dafb"/>
-        <text x="28" y="18" fill="#e2e8f0" class="tech-pill-text">React 19</text>
+        <rect width="76" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+        <text x="38" y="15" text-anchor="middle" class="stack-tag">React 19</text>
       </g>
-
-      <!-- Next.js App Router Pill -->
-      <g transform="translate(98, 0)">
-        <rect width="84" height="28" rx="6" fill="#1e293b" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1"/>
-        <circle cx="14" cy="14" r="2.5" fill="#ffffff"/>
-        <text x="26" y="18" fill="#ffffff" class="tech-pill-text">Next.js</text>
+      <g transform="translate(84, 0)">
+        <rect width="70" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+        <text x="35" y="15" text-anchor="middle" class="stack-tag">Next.js</text>
       </g>
-
-      <!-- TypeScript Pill -->
-      <g transform="translate(190, 0)">
-        <rect width="105" height="28" rx="6" fill="#1e293b" stroke="#3178c6" stroke-opacity="0.7" stroke-width="1"/>
-        <circle cx="14" cy="14" r="2.5" fill="#3178c6"/>
-        <text x="26" y="18" fill="#93c5fd" class="tech-pill-text">TypeScript</text>
+      <g transform="translate(162, 0)">
+        <rect width="90" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+        <text x="45" y="15" text-anchor="middle" class="stack-tag">TypeScript</text>
       </g>
-
-      <!-- Tailwind Pill -->
-      <g transform="translate(303, 0)">
-        <rect width="112" height="28" rx="6" fill="#1e293b" stroke="#06b6d4" stroke-opacity="0.7" stroke-width="1"/>
-        <circle cx="14" cy="14" r="2.5" fill="#06b6d4"/>
-        <text x="26" y="18" fill="#67e8f9" class="tech-pill-text">TailwindCSS</text>
+      <g transform="translate(260, 0)">
+        <rect width="92" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+        <text x="46" y="15" text-anchor="middle" class="stack-tag">Tailwind CSS</text>
       </g>
-
-      <!-- Second Row -->
-      <g transform="translate(0, 36)">
-        <!-- Node.js Pill -->
-        <g transform="translate(0, 0)">
-          <rect width="84" height="28" rx="6" fill="#1e293b" stroke="#22c55e" stroke-opacity="0.6" stroke-width="1"/>
-          <circle cx="14" cy="14" r="2.5" fill="#22c55e"/>
-          <text x="26" y="18" fill="#86efac" class="tech-pill-text">Node.js</text>
-        </g>
-
-        <!-- PostgreSQL Pill -->
-        <g transform="translate(92, 0)">
-          <rect width="104" height="28" rx="6" fill="#1e293b" stroke="#60a5fa" stroke-opacity="0.6" stroke-width="1"/>
-          <circle cx="14" cy="14" r="2.5" fill="#60a5fa"/>
-          <text x="26" y="18" fill="#bfdbfe" class="tech-pill-text">PostgreSQL</text>
-        </g>
-
-        <!-- Prisma Pill -->
-        <g transform="translate(204, 0)">
-          <rect width="78" height="28" rx="6" fill="#1e293b" stroke="#10b981" stroke-opacity="0.6" stroke-width="1"/>
-          <circle cx="14" cy="14" r="2.5" fill="#10b981"/>
-          <text x="26" y="18" fill="#6ee7b7" class="tech-pill-text">Prisma</text>
-        </g>
-
-        <!-- Supabase Pill -->
-        <g transform="translate(290, 0)">
-          <rect width="94" height="28" rx="6" fill="#1e293b" stroke="#3ecf8e" stroke-opacity="0.6" stroke-width="1"/>
-          <circle cx="14" cy="14" r="2.5" fill="#3ecf8e"/>
-          <text x="26" y="18" fill="#a7f3d0" class="tech-pill-text">Supabase</text>
-        </g>
-
-        <!-- Figma Pill -->
-        <g transform="translate(392, 0)">
-          <rect width="76" height="28" rx="6" fill="#1e293b" stroke="#f97316" stroke-opacity="0.6" stroke-width="1"/>
-          <circle cx="14" cy="14" r="2.5" fill="#f97316"/>
-          <text x="26" y="18" fill="#fed7aa" class="tech-pill-text">Figma</text>
-        </g>
+      <g transform="translate(360, 0)">
+        <rect width="72" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+        <text x="36" y="15" text-anchor="middle" class="stack-tag">Node.js</text>
       </g>
-
-    </g>
-
-    <!-- Bottom Stat Highlights -->
-    <g transform="translate(0, 226)">
-      <line x1="0" y1="0" x2="465" y2="0" stroke="#334155" stroke-opacity="0.6" stroke-width="1"/>
-      <g transform="translate(0, 16)">
-        <text x="0" y="0" fill="#38bdf8" font-family="-apple-system, sans-serif" font-weight="800" font-size="14">30+ <tspan fill="#64748b" font-weight="500">Repositories</tspan></text>
-        <text x="130" y="0" fill="#10b981" font-family="-apple-system, sans-serif" font-weight="800" font-size="14">250+ <tspan fill="#64748b" font-weight="500">Commits</tspan></text>
-        <text x="250" y="0" fill="#c084fc" font-family="-apple-system, sans-serif" font-weight="800" font-size="14">A+ <tspan fill="#64748b" font-weight="500">GitHub Grade</tspan></text>
-        <text x="380" y="0" fill="#f59e0b" font-family="-apple-system, sans-serif" font-weight="800" font-size="14">100% <tspan fill="#64748b" font-weight="500">TypeScript</tspan></text>
+      <g transform="translate(440, 0)">
+        <rect width="92" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+        <text x="46" y="15" text-anchor="middle" class="stack-tag">PostgreSQL</text>
       </g>
     </g>
-
   </g>
 
-  <!-- Right Column: Interactive Glassmorphic Code Card Mockup -->
-  <g transform="translate(545, 66)" filter="url(#softShadow)">
-    
-    <!-- Code Window Card Base -->
-    <rect width="405" height="248" rx="14" fill="url(#cardGrad)" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.2"/>
-    
-    <!-- Code Window Header -->
-    <rect width="405" height="34" rx="14" fill="#0f172a" fill-opacity="0.9"/>
-    <rect y="24" width="405" height="10" fill="#0f172a" fill-opacity="0.9"/>
-    <line x1="0" y1="34" x2="405" y2="34" stroke="#334155" stroke-opacity="0.5" stroke-width="1"/>
-    
-    <!-- Mini Dots -->
-    <circle cx="20" cy="17" r="4.5" fill="#ef4444" fill-opacity="0.8"/>
-    <circle cx="36" cy="17" r="4.5" fill="#f59e0b" fill-opacity="0.8"/>
-    <circle cx="52" cy="17" r="4.5" fill="#10b981" fill-opacity="0.8"/>
-
-    <!-- Tab File Name -->
-    <text x="74" y="21" fill="#94a3b8" class="code-text" font-size="11">developer.config.ts</text>
-    <rect x="295" y="8" width="96" height="18" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.7"/>
-    <text x="343" y="21" text-anchor="middle" fill="#38bdf8" class="code-text" font-size="9.5">TypeScript 5.x</text>
-
-    <!-- Code Content -->
-    <g transform="translate(20, 56)">
-      <!-- Line 1 -->
-      <text x="0" y="0" class="code-text">
-        <tspan fill="#c084fc">export const</tspan> <tspan fill="#38bdf8">engineer</tspan> = {
-      </text>
-
-      <!-- Line 2 -->
-      <text x="16" y="20" class="code-text">
-        <tspan fill="#94a3b8">name:</tspan> <tspan fill="#a7f3d0">'Omar Tantawy'</tspan>,
-      </text>
-
-      <!-- Line 3 -->
-      <text x="16" y="40" class="code-text">
-        <tspan fill="#94a3b8">role:</tspan> <tspan fill="#a7f3d0">'Full Stack Specialist'</tspan>,
-      </text>
-
-      <!-- Line 4 -->
-      <text x="16" y="60" class="code-text">
-        <tspan fill="#94a3b8">focus:</tspan> [<tspan fill="#fef08a">'React 19'</tspan>, <tspan fill="#fef08a">'Next.js'</tspan>, <tspan fill="#fef08a">'Node'</tspan>],
-      </text>
-
-      <!-- Line 5 -->
-      <text x="16" y="80" class="code-text">
-        <tspan fill="#94a3b8">architecture:</tspan> <tspan fill="#a7f3d0">'Sub-100ms Vitals'</tspan>,
-      </text>
-
-      <!-- Line 6 -->
-      <text x="16" y="100" class="code-text">
-        <tspan fill="#94a3b8">availableForHire:</tspan> <tspan fill="#f43f5e">true</tspan>,
-      </text>
-
-      <!-- Line 7 -->
-      <text x="16" y="120" class="code-text">
-        <tspan fill="#38bdf8">build</tspan><tspan fill="#e2e8f0">() {</tspan>
-      </text>
-
-      <!-- Line 8 -->
-      <text x="32" y="140" class="code-text">
-        <tspan fill="#c084fc">return</tspan> <tspan fill="#38bdf8">deploy</tspan>(<tspan fill="#a7f3d0">'Pixel-Perfect Apps ⚡'</tspan>);
-      </text>
-
-      <!-- Line 9 -->
-      <text x="16" y="160" class="code-text">
-        <tspan fill="#e2e8f0">}</tspan>
-      </text>
-
-      <!-- Line 10 -->
-      <text x="0" y="180" class="code-text">
-        <tspan fill="#e2e8f0">};</tspan>
-      </text>
-    </g>
-
+  <!-- Right Status Capsule -->
+  <g transform="translate(790, 42)">
+    <rect width="162" height="28" rx="14" fill="#064e3b" fill-opacity="0.4" stroke="#10b981" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="16" cy="14" r="3.5" fill="#34d399"/>
+    <text x="28" y="18" class="status-text">AVAILABLE FOR HIRE</text>
   </g>
-
 </svg>
