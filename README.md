@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- Swiss Kinetic / Neo-Brutalist Hero Header -->
+<!-- Swiss Kinetic / Neo-Brutalist Animated Hero Header -->
 <a href="https://omartantawy360.github.io/My-portfolio/">
   <img src="./assets/header.svg" width="100%" alt="Omar Tantawy // Swiss Kinetic UI Architect" />
 </a>
@@ -71,6 +71,13 @@ Frontend Developer & UI Architect specialized in crafting **high-performance web
 [![Postman](https://img.shields.io/badge/Postman-121212?style=flat-square&logo=postman&logoColor=FF6C37)](https://www.postman.com/)
 [![Figma](https://img.shields.io/badge/Figma-121212?style=flat-square&logo=figma&logoColor=F24E1E)](https://www.figma.com/)
 [![Adobe Illustrator](https://img.shields.io/badge/Adobe_Illustrator-121212?style=flat-square&logo=adobeillustrator&logoColor=FF9A00)](https://www.adobe.com/products/illustrator.html)
+
+---
+
+<!-- CENTERPIECE: Swiss Kinetic Telemetry Console -->
+<div align="center">
+  <img src="./assets/telemetry.svg" width="100%" alt="System Telemetry &amp; Vitals Benchmark" />
+</div>
 
 ---
 

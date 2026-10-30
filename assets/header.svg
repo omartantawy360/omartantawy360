@@ -1,173 +1,160 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="1000" height="450" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="1000" height="380" fill="none">
   <defs>
     <!-- Architectural Technical Grid -->
-    <pattern id="swissGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E3DDD1" stroke-width="1"/>
+    <pattern id="swissGrid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#E6E0D4" stroke-width="0.9"/>
     </pattern>
 
-    <filter id="stickerShadow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="neoShadow" x="-10%" y="-10%" width="130%" height="130%">
       <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#121212" flood-opacity="1"/>
     </filter>
   </defs>
 
   <style>
+    @keyframes spinKinetic {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes stickerFloat {
+      0%, 100% { transform: translateY(0px) rotate(-5deg); }
+      50% { transform: translateY(-5px) rotate(-4deg); }
+    }
+    @keyframes pulseLive {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(0.85); }
+    }
+    @keyframes marqueeMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
     .font-mono {
       font-family: 'Space Mono', 'Fira Code', 'Courier New', monospace;
     }
     .font-sans {
       font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
-    .title-heavy {
+    .title-large {
       font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
       font-weight: 900;
-      font-size: 110px;
+      font-size: 96px;
       letter-spacing: -3px;
       line-height: 0.9;
     }
+    .star-spinner {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: spinKinetic 16s linear infinite;
+    }
+    .floating-sticker {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: stickerFloat 4s ease-in-out infinite;
+    }
+    .beacon-pulse {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pulseLive 2s ease-in-out infinite;
+    }
   </style>
 
-  <!-- Canvas Background -->
-  <rect width="1000" height="450" fill="#F4F0E8"/>
-  <rect width="1000" height="450" fill="url(#swissGrid)"/>
+  <!-- Background Base -->
+  <rect width="1000" height="380" fill="#F5F2EA"/>
+  <rect width="1000" height="380" fill="url(#swissGrid)"/>
 
-  <!-- Outer Border (Swiss Brutalist Framing) -->
-  <rect x="1" y="1" width="998" height="448" fill="none" stroke="#121212" stroke-width="2"/>
+  <!-- Neo-Brutalist Frame -->
+  <rect x="2" y="2" width="996" height="376" fill="none" stroke="#121212" stroke-width="2.5"/>
 
-  <!-- ================= TOP NAVIGATION BAR ================= -->
+  <!-- ================= TOP STATUS BAR ================= -->
   <g transform="translate(0, 0)">
-    <!-- Top Bar Bottom Border -->
-    <line x1="0" y1="48" x2="1000" y2="48" stroke="#121212" stroke-width="1.5"/>
+    <line x1="0" y1="42" x2="1000" y2="42" stroke="#121212" stroke-width="1.8"/>
 
-    <!-- Left: OT Monogram Badge -->
-    <g transform="translate(24, 12)">
-      <rect width="26" height="24" fill="#FF4D30" stroke="#121212" stroke-width="1.5"/>
-      <text x="13" y="17" text-anchor="middle" fill="#FFFFFF" class="font-sans" font-weight="900" font-size="12" letter-spacing="-0.5">OT</text>
+    <!-- Left: Monogram Badge -->
+    <g transform="translate(20, 10)">
+      <rect width="24" height="22" fill="#FF4D30" stroke="#121212" stroke-width="1.4"/>
+      <text x="12" y="15" text-anchor="middle" fill="#FFFFFF" class="font-sans" font-weight="900" font-size="11" letter-spacing="-0.5">OT</text>
     </g>
 
-    <!-- Name & Swiss Kinetic Identifier -->
-    <g transform="translate(58, 21)">
-      <text x="0" y="0" fill="#121212" class="font-sans" font-weight="800" font-size="12" letter-spacing="0.5">OMAR TANTAWY</text>
-      <text x="0" y="11" fill="#71717A" class="font-mono" font-size="8" letter-spacing="1">FD. 04 / SWISS KINETIC</text>
+    <!-- Title & Mode -->
+    <g transform="translate(52, 24)">
+      <text x="0" y="0" fill="#121212" class="font-sans" font-weight="800" font-size="11.5" letter-spacing="1">OMAR TANTAWY</text>
+      <text x="110" y="0" fill="#71717A" class="font-mono" font-size="9.5"> // SWISS KINETIC SPEC</text>
     </g>
 
-    <!-- Commissions Open Pill -->
-    <g transform="translate(195, 14)">
-      <rect width="112" height="20" fill="#D4FF3A" stroke="#121212" stroke-width="1.2"/>
-      <text x="56" y="14" text-anchor="middle" fill="#121212" class="font-mono" font-weight="700" font-size="8.5" letter-spacing="0.5">COMMISSIONS OPEN</text>
+    <!-- Center Coordinates -->
+    <g transform="translate(420, 24)">
+      <text x="0" y="0" fill="#121212" class="font-mono" font-size="9.5" font-weight="600" letter-spacing="0.5">CAIRO, EG [ 30.0444° N, 31.2357° E ]</text>
     </g>
 
-    <!-- Center Navigation Tabs -->
-    <g transform="translate(340, 14)">
-      <!-- Active: 01. Hero -->
-      <rect width="58" height="20" fill="#121212"/>
-      <rect width="58" height="2" fill="#FF4D30"/>
-      <text x="29" y="14" text-anchor="middle" fill="#D4FF3A" class="font-mono" font-weight="700" font-size="9">01. Hero</text>
-
-      <text x="74" y="14" fill="#71717A" class="font-mono" font-size="9">02. Ethos</text>
-      <text x="132" y="14" fill="#71717A" class="font-mono" font-size="9">03. About</text>
-      <text x="188" y="14" fill="#71717A" class="font-mono" font-size="9">04. Works</text>
-      <text x="246" y="14" fill="#71717A" class="font-mono" font-size="9">05. Skills</text>
-      <text x="306" y="14" fill="#71717A" class="font-mono" font-size="9">06. Contact</text>
-    </g>
-
-    <!-- Right Controls -->
-    <g transform="translate(790, 14)">
-      <!-- Clock -->
-      <rect width="86" height="20" fill="#FAF8F5" stroke="#121212" stroke-width="1.2"/>
-      <circle cx="10" cy="10" r="3" fill="#FF4D30"/>
-      <text x="18" y="14" fill="#121212" class="font-mono" font-size="9" font-weight="600">CAI 22:53</text>
-
-      <!-- CV Button -->
-      <g transform="translate(94, 0)">
-        <rect width="40" height="20" fill="#FF4D30" stroke="#121212" stroke-width="1.2"/>
-        <text x="20" y="14" text-anchor="middle" fill="#FFFFFF" class="font-sans" font-weight="800" font-size="9.5">CV ↓</text>
-      </g>
-
-      <!-- Hub Button -->
-      <g transform="translate(140, 0)">
-        <rect width="46" height="20" fill="#FAF8F5" stroke="#121212" stroke-width="1.2"/>
-        <text x="23" y="14" text-anchor="middle" fill="#121212" class="font-mono" font-weight="700" font-size="9">HUB ↵</text>
-      </g>
+    <!-- Right Live Beacon -->
+    <g transform="translate(820, 12)">
+      <rect width="160" height="20" fill="#FAF8F5" stroke="#121212" stroke-width="1.2"/>
+      <circle cx="12" cy="10" r="3.5" fill="#FF4D30" class="beacon-pulse"/>
+      <text x="24" y="14" fill="#121212" class="font-mono" font-size="9" font-weight="700" letter-spacing="0.5">AVAILABLE FOR HIRE</text>
     </g>
   </g>
 
-  <!-- ================= SUB-HEADER METADATA STRIP ================= -->
-  <g transform="translate(0, 48)">
-    <line x1="0" y1="30" x2="1000" y2="30" stroke="#121212" stroke-width="1.5"/>
+  <!-- ================= HERO CONTENT AREA ================= -->
+  <g transform="translate(32, 60)">
 
-    <!-- Cairo Coordinates -->
-    <g transform="translate(24, 19)">
-      <rect width="7" height="7" fill="#FF4D30"/>
-      <text x="14" y="7" fill="#121212" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="0.5">CAIRO, EG • 30.0444° N, 31.2357° E</text>
+    <!-- Animated Floating Sticker -->
+    <g class="floating-sticker" transform="translate(80, 8)" filter="url(#neoShadow)">
+      <rect width="205" height="25" fill="#D4FF3A" stroke="#121212" stroke-width="1.6"/>
+      <text x="102" y="17" text-anchor="middle" fill="#121212" class="font-mono" font-weight="800" font-size="10" letter-spacing="1">★ KINETIC FRONTEND ARCHITECT ★</text>
     </g>
 
-    <!-- Center Specification -->
-    <g transform="translate(420, 7)">
-      <rect width="66" height="17" fill="#D4FF3A" stroke="#121212" stroke-width="1"/>
-      <text x="33" y="12" text-anchor="middle" fill="#121212" class="font-mono" font-weight="700" font-size="8.5">SPEC: 2026</text>
-      <text x="76" y="12" fill="#121212" class="font-mono" font-size="9.5" font-weight="600" letter-spacing="0.5">FRONTEND DEVELOPER // UI ARCHITECT</text>
+    <!-- Headline Line 1: OMAR + Animated Rotating Starburst -->
+    <g transform="translate(0, 102)">
+      <text x="0" y="0" class="title-large" fill="#121212">OMAR</text>
+
+      <!-- Rotating 8-Point Kinetic Starburst -->
+      <g transform="translate(390, -42)">
+        <polygon class="star-spinner" points="40,0 49,26 77,15 60,39 77,63 49,52 40,78 31,52 3,63 20,39 3,15 31,26" fill="#FF4D30"/>
+      </g>
     </g>
 
-    <!-- Available For Hire -->
-    <g transform="translate(860, 19)">
-      <rect width="7" height="7" fill="#FF4D30"/>
-      <text x="14" y="7" fill="#121212" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="0.5">AVAILABLE FOR HIRE</text>
+    <!-- Headline Line 2: TANTAWY (Vermillion) -->
+    <g transform="translate(0, 185)">
+      <text x="0" y="0" class="title-large" fill="#FF4D30">TANTAWY</text>
     </g>
+
+    <!-- Manifesto Text with Highlighter Badges -->
+    <g transform="translate(2, 222)">
+      <text x="0" y="22" class="font-sans" font-size="20" font-weight="700" fill="#121212" letter-spacing="-0.3">
+        Crafting
+      </text>
+
+      <!-- Highlighter 1: sub-second vitals -->
+      <g transform="translate(84, 4)">
+        <rect width="170" height="26" fill="#D4FF3A" stroke="#121212" stroke-width="1.4"/>
+        <text x="85" y="18" text-anchor="middle" class="font-sans" font-size="17" font-weight="800" fill="#121212">sub-second vitals</text>
+      </g>
+
+      <text x="264" y="22" class="font-sans" font-size="20" font-weight="700" fill="#121212" letter-spacing="-0.3">
+        with
+      </text>
+
+      <!-- Highlighter 2: React 19 & Next.js -->
+      <g transform="translate(312, 4)">
+        <rect width="180" height="26" fill="#FAF8F5" stroke="#121212" stroke-width="1.4"/>
+        <text x="90" y="18" text-anchor="middle" class="font-sans" font-size="17" font-weight="800" fill="#FF4D30">React 19 &amp; Next.js</text>
+      </g>
+
+      <text x="502" y="22" class="font-sans" font-size="20" font-weight="700" fill="#121212" letter-spacing="-0.3">
+        &amp; scalable full-stack persistence.
+      </text>
+    </g>
+
   </g>
 
-  <!-- ================= HERO HEADLINE AREA ================= -->
-  <g transform="translate(24, 95)">
-
-    <!-- Rotated Sticker: ★ 100% LIGHT & KINETIC ★ -->
-    <g transform="translate(75, 12) rotate(-6)" filter="url(#stickerShadow)">
-      <rect width="180" height="26" fill="#D4FF3A" stroke="#121212" stroke-width="1.5"/>
-      <text x="90" y="17" text-anchor="middle" fill="#121212" class="font-mono" font-weight="800" font-size="9.5" letter-spacing="1">★ 100% LIGHT &amp; KINETIC ★</text>
+  <!-- ================= BOTTOM TECHNICAL RIBBON ================= -->
+  <g transform="translate(0, 340)">
+    <rect width="1000" height="40" fill="#121212"/>
+    <g transform="translate(24, 25)">
+      <text x="0" y="0" fill="#D4FF3A" class="font-mono" font-size="11" font-weight="800" letter-spacing="1.5">● SPEC: 2026</text>
+      <text x="120" y="0" fill="#FAF8F5" class="font-mono" font-size="11" letter-spacing="1">REACT 19 • NEXT.JS (APP ROUTER) • TYPESCRIPT • TAILWIND CSS • NODE.JS • POSTGRESQL • SUPABASE</text>
+      <text x="910" y="0" fill="#FF4D30" class="font-mono" font-size="11" font-weight="800">100% KINETIC ↵</text>
     </g>
-
-    <!-- LINE 1: OMAR + VERMILLION STARBURST -->
-    <g transform="translate(0, 120)">
-      <text x="0" y="0" class="title-heavy" fill="#121212">OMAR</text>
-
-      <!-- 8-Point Kinetic Starburst Glyphs beside OMAR -->
-      <g transform="translate(435, -45)">
-        <polygon points="50,0 62,35 98,20 75,50 98,80 62,65 50,100 38,65 2,80 25,50 2,20 38,35" fill="#FF4D30"/>
-      </g>
-    </g>
-
-    <!-- LINE 2: TANTAWY (IN BOLD VERMILLION) -->
-    <g transform="translate(0, 218)">
-      <text x="0" y="0" class="title-heavy" fill="#FF4D30">TANTAWY</text>
-    </g>
-
-    <!-- MANIFESTO BIO WITH HIGHLIGHTER BOXES -->
-    <g transform="translate(4, 258)">
-      <text x="0" y="24" class="font-sans" font-size="22" font-weight="700" fill="#121212" letter-spacing="-0.5">
-        Frontend Developer specialized in crafting
-      </text>
-
-      <!-- Highlighter Box 1: high-performance -->
-      <g transform="translate(442, 4)">
-        <rect width="184" height="28" fill="#D4FF3A" stroke="#121212" stroke-width="1.5"/>
-        <text x="92" y="20" text-anchor="middle" class="font-sans" font-size="21" font-weight="800" fill="#121212" letter-spacing="-0.5">high-performance</text>
-      </g>
-
-      <text x="636" y="24" class="font-sans" font-size="22" font-weight="700" fill="#121212" letter-spacing="-0.5">
-        web applications,
-      </text>
-
-      <!-- Second Line of Bio -->
-      <g transform="translate(0, 42)">
-        <!-- Highlighter Box 2: kinetic interactions -->
-        <g transform="translate(0, -18)">
-          <rect width="206" height="28" fill="#D4FF3A" stroke="#121212" stroke-width="1.5"/>
-          <text x="103" y="20" text-anchor="middle" class="font-sans" font-size="21" font-weight="800" fill="#121212" letter-spacing="-0.5">kinetic interactions</text>
-        </g>
-        <text x="216" y="4" class="font-sans" font-size="22" font-weight="700" fill="#121212" letter-spacing="-0.5">
-          &amp; scalable full-stack architectures.
-        </text>
-      </g>
-    </g>
-
   </g>
 
 </svg>
