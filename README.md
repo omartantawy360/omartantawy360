@@ -1,14 +1,16 @@
 <div align="center">
 
-# Omar Tantawy
-### Full Stack Developer & Front-End Specialist
+<!-- Hero Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:161b22,70:1e293b,100:0284c7&height=220&section=header&text=Omar%20Tantawy&fontSize=50&fontAlignY=38&desc=Full%20Stack%20Developer%20%E2%80%A2%20Front-End%20Specialist&descAlignY=60&descSize=20&fontColor=ffffff" width="100%" alt="Omar Tantawy Banner" />
 
+<!-- Dynamic Animated Subtitle -->
 <p align="center">
   <a href="https://github.com/omartantawy360">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=550&lines=Full+Stack+Developer+%7C+Front-End+Specialist;Building+scalable%2C+high-performance+web+apps;React+19+%E2%80%A2+Next.js+(App+Router)+%E2%80%A2+TypeScript;Node.js+%E2%80%A2+PostgreSQL+%E2%80%A2+Modern+UI%2FUX" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=580&lines=Full+Stack+Developer+%7C+Front-End+Specialist;Crafting+fluid%2C+high-performance+web+apps;React+19+%E2%80%A2+Next.js+(App+Router)+%E2%80%A2+TypeScript;Architecting+scalable+backends+%26+modern+APIs;Designing+pixel-perfect+interfaces+with+Figma" alt="Typing SVG" />
   </a>
 </p>
 
+<!-- Quick Action & Status Badges -->
 <p align="center">
   <a href="https://omartantawy360.github.io/My-portfolio/"><img src="https://img.shields.io/badge/Portfolio-omartantawy.dev-0ea5e9?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
   &nbsp;
@@ -19,26 +21,59 @@
   <img src="https://komarev.com/ghpvc/?username=omartantawy360&color=38bdf8&style=flat-square&label=VIEWS" alt="Profile Views" />
 </p>
 
----
-
 </div>
 
-## 👨‍💻 About Me
+---
 
-```yaml
-developer:
-  name: Omar Tantawy
-  role: Full Stack Developer & Front-End Specialist
-  core_stack: [React 19, Next.js, TypeScript, Node.js, PostgreSQL]
-  passions: [UI/UX Craftsmanship, Scalable Architectures, Web Performance]
-  current_focus: Building modern, production-grade applications with Next.js App Router
-  available_for: Full-stack contracts, high-impact front-end roles & collaborations
+### 🖥️ Developer Terminal
+
+```bash
+┌──(omar@fullstack-station)-[~]
+└─$ cat developer_manifest.json
 ```
 
-- 🚀 **Front-End Specialist:** Passionate about building fluid, accessible, and high-performance interfaces using **React 19**, **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**.
-- ⚙️ **End-to-End Engineering:** Architecting scalable backends, clean microservices, and robust RESTful APIs with **Node.js**, **Express**, **PHP (PDO)**, and **Prisma ORM**.
-- 🗄️ **Data Architecture:** Designing performant schemas and relational workflows across **PostgreSQL**, **MySQL**, and **Supabase**.
-- 🎨 **Design-Centric Mindset:** Bridging UX engineering and production code with hands-on expertise in **Figma** and **Adobe Illustrator**.
+```json
+{
+  "name": "Omar Tantawy",
+  "role": "Full Stack Developer & Front-End Specialist",
+  "current_focus": "Building high-throughput web apps with Next.js 15 App Router & React 19",
+  "stack": {
+    "frontend": ["React 19", "Next.js", "TypeScript", "Tailwind CSS", "Zustand", "Vite"],
+    "backend": ["Node.js", "Express", "PHP (PDO)", "RESTful APIs"],
+    "databases": ["PostgreSQL", "MySQL", "Prisma ORM", "Supabase"],
+    "tooling": ["Git", "GitHub", "Vercel", "Railway", "Postman", "Figma", "Illustrator"]
+  },
+  "architecture_principles": [
+    "Clean Code & Zero-Bloat Microservices",
+    "Optimized Server/Client State Separation",
+    "Sub-second First Contentful Paint & Core Web Vitals"
+  ],
+  "open_to": ["Full-Stack Contracts", "Front-End Specialization", "Open Source Collaborations"]
+}
+```
+
+---
+
+## ⚡ Core Engineering Pillars
+
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🚀 Front-End Precision</h4>
+      <ul>
+        <li><b>Modern Ecosystem:</b> Deep specialization in <b>React 19</b>, <b>Next.js (App Router)</b>, and <b>TypeScript</b> for robust, scalable client-side and server-rendered web solutions.</li>
+        <li><b>State & Performance:</b> Ultra-lightweight state orchestration with <b>Zustand</b>, instant bundling with <b>Vite</b>, and fluid styling systems using <b>Tailwind CSS</b>.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h4>⚙️ Backend & Data Resilience</h4>
+      <ul>
+        <li><b>Scalable Services:</b> Production-ready RESTful APIs and backend services built with <b>Node.js</b>, <b>Express</b>, and structured <b>PHP (PDO)</b>.</li>
+        <li><b>Data Integrity:</b> Schema modeling, type-safe query generation with <b>Prisma ORM</b>, and relational stores with <b>PostgreSQL</b>, <b>MySQL</b>, and <b>Supabase</b>.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -86,6 +121,22 @@ developer:
 
 ---
 
+## 📌 Featured Work & Repositories
+
+<div align="center">
+  <p align="center">
+    <a href="https://github.com/omartantawy360/My-portfolio">
+      <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=omartantawy360&repo=My-portfolio&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="My-portfolio" />
+    </a>
+    &nbsp;&nbsp;
+    <a href="https://github.com/omartantawy360/shop-prototype">
+      <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=omartantawy360&repo=shop-prototype&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="shop-prototype" />
+    </a>
+  </p>
+</div>
+
+---
+
 ## 📊 GitHub Analytics
 
 <div align="center">
@@ -108,12 +159,40 @@ developer:
 
 ---
 
-## 🤝 Connect With Me
+<details>
+<summary><b>💡 Engineering Philosophy & Best Practices (Click to expand)</b></summary>
+<br/>
+
+- **Component Modularity:** Architecting frontends with single-responsibility principles, Atomic Design, and React 19 Server Components to minimize client-side bundle sizes.
+- **State Management Sanity:** Strictly separating server state (cache & data queries) from local client UI state (Zustand) to eliminate race conditions and redundant re-renders.
+- **Type-Safety from DB to DOM:** End-to-end typing spanning Prisma schema definitions, backend response validation, and React component props.
+- **Performance & Vitals:** Measuring and adhering strictly to Google Core Web Vitals (LCP, FID/INP, CLS) for near-instant interaction latency.
+
+</details>
+
+<details>
+<summary><b>🛠️ Developer Setup & Environment (Click to expand)</b></summary>
+<br/>
+
+- **Editor:** Visual Studio Code / Cursor with Tokyo Night Theme & Fira Code font
+- **Environment:** Windows Terminal + PowerShell / Git Bash
+- **Design Tools:** Figma (Design Systems & Auto-Layout) & Adobe Illustrator (Vector assets & icons)
+- **Deployment & Cloud:** Vercel (Edge Functions & Next.js CI/CD), Railway (Node & Database hosting)
+
+</details>
+
+---
 
 <div align="center">
 
 <p align="center">
-  Let's collaborate on ambitious projects or discuss modern web architecture!
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Engineering Quote" />
+</p>
+
+## 🤝 Connect & Collaborate
+
+<p align="center">
+  Whether you have an ambitious project in mind, an exciting role, or just want to chat tech:
 </p>
 
 <p align="center">
@@ -134,8 +213,11 @@ developer:
   </a>
 </p>
 
+<!-- Waving Footer Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0284c7,30:1e293b,70:161b22,100:0d1117&height=120&section=footer" width="100%" alt="Footer Banner" />
+
 <br/>
 
-<sub>Crafted with modern web standards & clean code by <b>Omar Tantawy</b></sub>
+<sub>Crafted with high-contrast precision & clean code by <b>Omar Tantawy</b></sub>
 
 </div>
