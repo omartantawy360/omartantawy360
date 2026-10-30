@@ -1,7 +1,9 @@
 <div align="center">
 
-<!-- Hero Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:161b22,70:1e293b,100:0284c7&height=220&section=header&text=Omar%20Tantawy&fontSize=50&fontAlignY=38&desc=Full%20Stack%20Developer%20%E2%80%A2%20Front-End%20Specialist&descAlignY=60&descSize=20&fontColor=ffffff" width="100%" alt="Omar Tantawy Banner" />
+<!-- Bespoke Creative Hero Banner -->
+<a href="https://github.com/omartantawy360">
+  <img src="https://raw.githubusercontent.com/omartantawy360/omartantawy360/main/assets/header.svg" width="100%" alt="Omar Tantawy - Full Stack Developer & Front-End Specialist" />
+</a>
 
 <!-- Dynamic Animated Subtitle -->
 <p align="center">
@@ -275,8 +277,12 @@ flowchart LR
   </a>
 </p>
 
-<!-- Waving Footer Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0284c7,30:1e293b,70:161b22,100:0d1117&height=120&section=footer" width="100%" alt="Footer Banner" />
+<br/>
+
+<!-- Bespoke Creative Footer Banner -->
+<a href="https://github.com/omartantawy360">
+  <img src="https://raw.githubusercontent.com/omartantawy360/omartantawy360/main/assets/footer.svg" width="100%" alt="Footer Banner" />
+</a>
 
 <br/>
 
