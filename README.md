@@ -21,6 +21,17 @@
   <img src="https://komarev.com/ghpvc/?username=omartantawy360&color=38bdf8&style=flat-square&label=VIEWS" alt="Profile Views" />
 </p>
 
+<!-- Metric Highlights -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Production_Projects-30+-38bdf8?style=flat-square&logo=git&logoColor=white" alt="30+ Projects" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Commits_(2026)-250+-22c55e?style=flat-square&logo=github&logoColor=white" alt="250+ Commits" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Code_Coverage-TypeScript_First-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript First" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Code_Architecture-Clean_&_Modular-f59e0b?style=flat-square&logo=visualstudiocode&logoColor=white" alt="Clean Architecture" />
+</p>
+
 </div>
 
 ---
@@ -34,8 +45,8 @@
 
 ```json
 {
-  "name": "Omar Tantawy",
-  "role": "Full Stack Developer & Front-End Specialist",
+  "engineer": "Omar Tantawy",
+  "specialization": "Full Stack Developer & Front-End Specialist",
   "current_focus": "Building high-throughput web apps with Next.js 15 App Router & React 19",
   "stack": {
     "frontend": ["React 19", "Next.js", "TypeScript", "Tailwind CSS", "Zustand", "Vite"],
@@ -48,8 +59,31 @@
     "Optimized Server/Client State Separation",
     "Sub-second First Contentful Paint & Core Web Vitals"
   ],
-  "open_to": ["Full-Stack Contracts", "Front-End Specialization", "Open Source Collaborations"]
+  "open_to": ["Full-Stack Contracts", "Front-End Specialization", "High-Impact Engineering"]
 }
+```
+
+---
+
+## 🏗️ System Architecture & Dataflow
+
+```mermaid
+flowchart LR
+    subgraph UI ["Client Layer"]
+        A["React 19 / Next.js"] --> B["Zustand Store"]
+        A --> C["Tailwind CSS UI"]
+    end
+    subgraph Engine ["API & Microservices"]
+        D["Next.js App Router"] --> E["Node.js / Express"]
+        D --> F["PHP (PDO) APIs"]
+    end
+    subgraph Storage ["Persistence Layer"]
+        G["Prisma ORM"] --> H[("PostgreSQL")]
+        G --> I[("MySQL")]
+        G --> J[("Supabase Realtime")]
+    end
+    UI --> Engine
+    Engine --> Storage
 ```
 
 ---
@@ -121,6 +155,18 @@
 
 ---
 
+## 🔄 End-to-End Development Lifecycle
+
+| Phase | Core Tooling | Architectural Deliverables |
+| :--- | :--- | :--- |
+| **01. Design & Tokens** | Figma, Adobe Illustrator | Design tokens, responsive components, accessibility compliance |
+| **02. Frontend Engineering** | React 19, Next.js 15, TypeScript, Tailwind | Server Components, fluid UI, lightweight Zustand stores, instant Vite builds |
+| **03. Services & APIs** | Node.js, Express, PHP (PDO), REST | High-performance endpoints, secure auth, input sanitation & validation |
+| **04. Persistence Layer** | PostgreSQL, MySQL, Supabase, Prisma | Relational schemas, indexing strategies, zero-downtime migrations |
+| **05. Cloud & CI/CD** | Vercel, Railway, Git, GitHub, Postman | Automated preview deploys, regression testing, edge caching |
+
+---
+
 ## 📌 Featured Work & Repositories
 
 <div align="center">
@@ -131,6 +177,11 @@
     &nbsp;&nbsp;
     <a href="https://github.com/omartantawy360/shop-prototype">
       <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=omartantawy360&repo=shop-prototype&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="shop-prototype" />
+    </a>
+  </p>
+  <p align="center">
+    <a href="https://github.com/omartantawy360/wave-team">
+      <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=omartantawy360&repo=wave-team&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="wave-team" />
     </a>
   </p>
 </div>
@@ -178,6 +229,17 @@
 - **Environment:** Windows Terminal + PowerShell / Git Bash
 - **Design Tools:** Figma (Design Systems & Auto-Layout) & Adobe Illustrator (Vector assets & icons)
 - **Deployment & Cloud:** Vercel (Edge Functions & Next.js CI/CD), Railway (Node & Database hosting)
+
+</details>
+
+<details>
+<summary><b>🔬 Currently Experimenting & Building (Click to expand)</b></summary>
+<br/>
+
+- ⚡ **React 19 Actions & Optimistic UI:** Exploring server actions with `useActionState` and `useOptimistic` for instantaneous feedback loops.
+- 🌐 **Next.js 15 Partial Prerendering (PPR):** Combining static shells with dynamic streaming data components.
+- 🔄 **Real-Time Synchronous Pipelines:** Integrating Supabase realtime channels and WebSocket listeners for collaborative web applications.
+- 🎨 **Figma Variables to Tailwind Tokens:** Streamlining design system handoffs into automated CSS token variables.
 
 </details>
 
