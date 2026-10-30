@@ -1,111 +1,173 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 180" width="1000" height="180" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="1000" height="450" fill="none">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0e17"/>
-      <stop offset="100%" stop-color="#05070c"/>
-    </linearGradient>
+    <!-- Architectural Technical Grid -->
+    <pattern id="swissGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E3DDD1" stroke-width="1"/>
+    </pattern>
 
-    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="50%" stop-color="#818cf8"/>
-      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.2"/>
-    </linearGradient>
-
-    <radialGradient id="softGlow" cx="0%" cy="0%" r="80%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
-    </radialGradient>
+    <filter id="stickerShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#121212" flood-opacity="1"/>
+    </filter>
   </defs>
 
   <style>
-    .kicker {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Fira Code', monospace;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      fill: #38bdf8;
+    .font-mono {
+      font-family: 'Space Mono', 'Fira Code', 'Courier New', monospace;
     }
-    .name {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;
-      font-size: 44px;
-      font-weight: 800;
-      letter-spacing: -0.8px;
-      fill: #ffffff;
+    .font-sans {
+      font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
-    .tagline {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      font-weight: 400;
-      fill: #94a3b8;
-    }
-    .status-text {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      fill: #a7f3d0;
-    }
-    .stack-tag {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
-      font-size: 11px;
-      font-weight: 500;
-      fill: #cbd5e1;
+    .title-heavy {
+      font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 110px;
+      letter-spacing: -3px;
+      line-height: 0.9;
     }
   </style>
 
-  <!-- Card Canvas -->
-  <rect x="1" y="1" width="998" height="178" rx="12" fill="url(#bg)"/>
-  <rect x="1" y="1" width="998" height="178" rx="12" fill="url(#softGlow)"/>
-  <rect x="1" y="1" width="998" height="178" rx="12" fill="none" stroke="#1e293b" stroke-width="1"/>
+  <!-- Canvas Background -->
+  <rect width="1000" height="450" fill="#F4F0E8"/>
+  <rect width="1000" height="450" fill="url(#swissGrid)"/>
 
-  <!-- Top Accent Gradient Line -->
-  <path d="M 12 1 L 988 1" stroke="url(#accentLine)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Outer Border (Swiss Brutalist Framing) -->
+  <rect x="1" y="1" width="998" height="448" fill="none" stroke="#121212" stroke-width="2"/>
 
-  <!-- Content Block -->
-  <g transform="translate(48, 42)">
-    <!-- Role Kicker -->
-    <text x="0" y="0" class="kicker">Full-Stack Developer &amp; Front-End Specialist</text>
+  <!-- ================= TOP NAVIGATION BAR ================= -->
+  <g transform="translate(0, 0)">
+    <!-- Top Bar Bottom Border -->
+    <line x1="0" y1="48" x2="1000" y2="48" stroke="#121212" stroke-width="1.5"/>
 
-    <!-- Name -->
-    <text x="0" y="44" class="name">Omar Tantawy</text>
+    <!-- Left: OT Monogram Badge -->
+    <g transform="translate(24, 12)">
+      <rect width="26" height="24" fill="#FF4D30" stroke="#121212" stroke-width="1.5"/>
+      <text x="13" y="17" text-anchor="middle" fill="#FFFFFF" class="font-sans" font-weight="900" font-size="12" letter-spacing="-0.5">OT</text>
+    </g>
 
-    <!-- Tagline -->
-    <text x="0" y="74" class="tagline">Crafting modern, type-safe web applications with React 19, Next.js (App Router) &amp; Node.js</text>
+    <!-- Name & Swiss Kinetic Identifier -->
+    <g transform="translate(58, 21)">
+      <text x="0" y="0" fill="#121212" class="font-sans" font-weight="800" font-size="12" letter-spacing="0.5">OMAR TANTAWY</text>
+      <text x="0" y="11" fill="#71717A" class="font-mono" font-size="8" letter-spacing="1">FD. 04 / SWISS KINETIC</text>
+    </g>
 
-    <!-- Tech Pills -->
-    <g transform="translate(0, 96)">
-      <g transform="translate(0, 0)">
-        <rect width="76" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
-        <text x="38" y="15" text-anchor="middle" class="stack-tag">React 19</text>
+    <!-- Commissions Open Pill -->
+    <g transform="translate(195, 14)">
+      <rect width="112" height="20" fill="#D4FF3A" stroke="#121212" stroke-width="1.2"/>
+      <text x="56" y="14" text-anchor="middle" fill="#121212" class="font-mono" font-weight="700" font-size="8.5" letter-spacing="0.5">COMMISSIONS OPEN</text>
+    </g>
+
+    <!-- Center Navigation Tabs -->
+    <g transform="translate(340, 14)">
+      <!-- Active: 01. Hero -->
+      <rect width="58" height="20" fill="#121212"/>
+      <rect width="58" height="2" fill="#FF4D30"/>
+      <text x="29" y="14" text-anchor="middle" fill="#D4FF3A" class="font-mono" font-weight="700" font-size="9">01. Hero</text>
+
+      <text x="74" y="14" fill="#71717A" class="font-mono" font-size="9">02. Ethos</text>
+      <text x="132" y="14" fill="#71717A" class="font-mono" font-size="9">03. About</text>
+      <text x="188" y="14" fill="#71717A" class="font-mono" font-size="9">04. Works</text>
+      <text x="246" y="14" fill="#71717A" class="font-mono" font-size="9">05. Skills</text>
+      <text x="306" y="14" fill="#71717A" class="font-mono" font-size="9">06. Contact</text>
+    </g>
+
+    <!-- Right Controls -->
+    <g transform="translate(790, 14)">
+      <!-- Clock -->
+      <rect width="86" height="20" fill="#FAF8F5" stroke="#121212" stroke-width="1.2"/>
+      <circle cx="10" cy="10" r="3" fill="#FF4D30"/>
+      <text x="18" y="14" fill="#121212" class="font-mono" font-size="9" font-weight="600">CAI 22:53</text>
+
+      <!-- CV Button -->
+      <g transform="translate(94, 0)">
+        <rect width="40" height="20" fill="#FF4D30" stroke="#121212" stroke-width="1.2"/>
+        <text x="20" y="14" text-anchor="middle" fill="#FFFFFF" class="font-sans" font-weight="800" font-size="9.5">CV ↓</text>
       </g>
-      <g transform="translate(84, 0)">
-        <rect width="70" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
-        <text x="35" y="15" text-anchor="middle" class="stack-tag">Next.js</text>
-      </g>
-      <g transform="translate(162, 0)">
-        <rect width="90" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
-        <text x="45" y="15" text-anchor="middle" class="stack-tag">TypeScript</text>
-      </g>
-      <g transform="translate(260, 0)">
-        <rect width="92" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
-        <text x="46" y="15" text-anchor="middle" class="stack-tag">Tailwind CSS</text>
-      </g>
-      <g transform="translate(360, 0)">
-        <rect width="72" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
-        <text x="36" y="15" text-anchor="middle" class="stack-tag">Node.js</text>
-      </g>
-      <g transform="translate(440, 0)">
-        <rect width="92" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
-        <text x="46" y="15" text-anchor="middle" class="stack-tag">PostgreSQL</text>
+
+      <!-- Hub Button -->
+      <g transform="translate(140, 0)">
+        <rect width="46" height="20" fill="#FAF8F5" stroke="#121212" stroke-width="1.2"/>
+        <text x="23" y="14" text-anchor="middle" fill="#121212" class="font-mono" font-weight="700" font-size="9">HUB ↵</text>
       </g>
     </g>
   </g>
 
-  <!-- Right Status Capsule -->
-  <g transform="translate(790, 42)">
-    <rect width="162" height="28" rx="14" fill="#064e3b" fill-opacity="0.4" stroke="#10b981" stroke-opacity="0.4" stroke-width="1"/>
-    <circle cx="16" cy="14" r="3.5" fill="#34d399"/>
-    <text x="28" y="18" class="status-text">AVAILABLE FOR HIRE</text>
+  <!-- ================= SUB-HEADER METADATA STRIP ================= -->
+  <g transform="translate(0, 48)">
+    <line x1="0" y1="30" x2="1000" y2="30" stroke="#121212" stroke-width="1.5"/>
+
+    <!-- Cairo Coordinates -->
+    <g transform="translate(24, 19)">
+      <rect width="7" height="7" fill="#FF4D30"/>
+      <text x="14" y="7" fill="#121212" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="0.5">CAIRO, EG • 30.0444° N, 31.2357° E</text>
+    </g>
+
+    <!-- Center Specification -->
+    <g transform="translate(420, 7)">
+      <rect width="66" height="17" fill="#D4FF3A" stroke="#121212" stroke-width="1"/>
+      <text x="33" y="12" text-anchor="middle" fill="#121212" class="font-mono" font-weight="700" font-size="8.5">SPEC: 2026</text>
+      <text x="76" y="12" fill="#121212" class="font-mono" font-size="9.5" font-weight="600" letter-spacing="0.5">FRONTEND DEVELOPER // UI ARCHITECT</text>
+    </g>
+
+    <!-- Available For Hire -->
+    <g transform="translate(860, 19)">
+      <rect width="7" height="7" fill="#FF4D30"/>
+      <text x="14" y="7" fill="#121212" class="font-mono" font-size="9.5" font-weight="700" letter-spacing="0.5">AVAILABLE FOR HIRE</text>
+    </g>
   </g>
+
+  <!-- ================= HERO HEADLINE AREA ================= -->
+  <g transform="translate(24, 95)">
+
+    <!-- Rotated Sticker: ★ 100% LIGHT & KINETIC ★ -->
+    <g transform="translate(75, 12) rotate(-6)" filter="url(#stickerShadow)">
+      <rect width="180" height="26" fill="#D4FF3A" stroke="#121212" stroke-width="1.5"/>
+      <text x="90" y="17" text-anchor="middle" fill="#121212" class="font-mono" font-weight="800" font-size="9.5" letter-spacing="1">★ 100% LIGHT &amp; KINETIC ★</text>
+    </g>
+
+    <!-- LINE 1: OMAR + VERMILLION STARBURST -->
+    <g transform="translate(0, 120)">
+      <text x="0" y="0" class="title-heavy" fill="#121212">OMAR</text>
+
+      <!-- 8-Point Kinetic Starburst Glyphs beside OMAR -->
+      <g transform="translate(435, -45)">
+        <polygon points="50,0 62,35 98,20 75,50 98,80 62,65 50,100 38,65 2,80 25,50 2,20 38,35" fill="#FF4D30"/>
+      </g>
+    </g>
+
+    <!-- LINE 2: TANTAWY (IN BOLD VERMILLION) -->
+    <g transform="translate(0, 218)">
+      <text x="0" y="0" class="title-heavy" fill="#FF4D30">TANTAWY</text>
+    </g>
+
+    <!-- MANIFESTO BIO WITH HIGHLIGHTER BOXES -->
+    <g transform="translate(4, 258)">
+      <text x="0" y="24" class="font-sans" font-size="22" font-weight="700" fill="#121212" letter-spacing="-0.5">
+        Frontend Developer specialized in crafting
+      </text>
+
+      <!-- Highlighter Box 1: high-performance -->
+      <g transform="translate(442, 4)">
+        <rect width="184" height="28" fill="#D4FF3A" stroke="#121212" stroke-width="1.5"/>
+        <text x="92" y="20" text-anchor="middle" class="font-sans" font-size="21" font-weight="800" fill="#121212" letter-spacing="-0.5">high-performance</text>
+      </g>
+
+      <text x="636" y="24" class="font-sans" font-size="22" font-weight="700" fill="#121212" letter-spacing="-0.5">
+        web applications,
+      </text>
+
+      <!-- Second Line of Bio -->
+      <g transform="translate(0, 42)">
+        <!-- Highlighter Box 2: kinetic interactions -->
+        <g transform="translate(0, -18)">
+          <rect width="206" height="28" fill="#D4FF3A" stroke="#121212" stroke-width="1.5"/>
+          <text x="103" y="20" text-anchor="middle" class="font-sans" font-size="21" font-weight="800" fill="#121212" letter-spacing="-0.5">kinetic interactions</text>
+        </g>
+        <text x="216" y="4" class="font-sans" font-size="22" font-weight="700" fill="#121212" letter-spacing="-0.5">
+          &amp; scalable full-stack architectures.
+        </text>
+      </g>
+    </g>
+
+  </g>
+
 </svg>
